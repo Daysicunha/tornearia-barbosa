@@ -55,9 +55,65 @@ header::after { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px
 .hero-text h1 { max-width: 760px; margin: 22px 0 24px; color: var(--white); font-family: "Montserrat", sans-serif; font-size: clamp(2.55rem, 5vw, 4.4rem); font-weight: 800; line-height: 1.02; text-wrap: balance; }
 .hero-text > p { max-width: 670px; margin-bottom: 32px; color: #d5d5d5; font-size: clamp(1rem, 1.5vw, 1.14rem); line-height: 1.65; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
-.hero-clients { margin-top: 34px; }
-.hero-clients small { display: block; margin-bottom: 8px; color: var(--green-light); font-weight: 600; }
-.hero-clients p { color: #d8d8d8; line-height: 1.55; }
+.hero-clients {
+    width: min(100%, 670px);
+    margin: 36px auto 0;
+    text-align: center;
+    padding: 18px 20px;
+    border: 1px solid rgba(8, 187, 63, .48);
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(2, 86, 53, .28), rgba(8, 187, 63, .08));
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .22);
+}
+
+.hero-clients-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.hero-clients-icon {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--green-light), var(--green));
+    box-shadow: 0 8px 20px rgba(8, 187, 63, .28);
+}
+
+.hero-clients-label {
+    color: var(--white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.hero-clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-clients-list span {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    padding: 9px 14px;
+    border: 1px solid rgba(124, 255, 159, .25);
+    border-radius: 999px;
+    color: #effff3;
+    background: rgba(255, 255, 255, .07);
+    font-size: .9rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
 .hero-image { display: flex; min-width: 0; justify-content: flex-end; }
 .hero-image img { width: 100%; max-width: 500px; aspect-ratio: 4 / 5; border: 1px solid rgba(255, 255, 255, .08); border-radius: 22px; object-fit: cover; box-shadow: 0 20px 50px rgba(0, 0, 0, .4); animation: float 5s ease-in-out infinite; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
@@ -91,8 +147,25 @@ header::after { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px
 .sobre .section-title h2 { font-size: clamp(1.9rem, 3.5vw, 2.65rem); }
 .sobre-content { display: grid; grid-template-columns: minmax(300px, .85fr) minmax(0, 1.15fr); align-items: center; gap: clamp(38px, 6vw, 72px); }
 .sobre-images { display: flex; width: 100%; min-width: 0; align-items: center; justify-content: center; }
-.owner-card { width: min(100%, 430px); padding: 14px; border: 1px solid rgba(255, 255, 255, .07); border-radius: 22px; background: #1d1d1d; box-shadow: var(--shadow); }
-.owner-card img { width: 100%; aspect-ratio: 1 / 1; border: 3px solid var(--green-light); border-radius: 14px; object-fit: cover; object-position: top center; }
+.owner-card {
+    width: min(100%, 390px);
+    height: 390px;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .07);
+    border-radius: 22px;
+    background: #1d1d1d;
+    box-shadow: var(--shadow);
+}
+
+.owner-card img {
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--green-light);
+    border-radius: 14px;
+    object-fit: cover;
+    object-position: top center;
+}
 .sobre-text h3 { margin-bottom: 20px; color: var(--white); font-size: clamp(1.4rem, 2.5vw, 1.75rem); line-height: 1.35; }
 .sobre-text p { margin-bottom: 18px; color: #cfcfcf; line-height: 1.85; }
 
@@ -171,6 +244,7 @@ footer { padding-top: 78px; background: var(--black); }
     .hero-text, .hero-text h1, .hero-text > p, .hero-clients { margin-inline: auto; text-align: center; }
     .hero-tag { display: flex; width: fit-content; margin-inline: auto; justify-content: center; text-align: center; }
     .hero-buttons { justify-content: center; }
+    .hero-clients-heading, .hero-clients-list { justify-content: center; }
     .hero-image { justify-content: center; }
     .hero-image img { max-width: 620px; aspect-ratio: 16 / 10; }
     .trust-grid, .counter-grid, .diferenciais-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -178,7 +252,7 @@ footer { padding-top: 78px; background: var(--black); }
     .sobre-content { grid-template-columns: 1fr; gap: 38px; }
     .sobre-images { order: 1; }
     .sobre-text { order: 2; max-width: 720px; margin-inline: auto; text-align: center; }
-    .owner-card { width: min(100%, 520px); }
+    .owner-card { width: min(100%, 390px); height: min(390px, 92vw); }
     .contato-wrapper { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1.2fr .8fr; }
     .footer-col:first-child { grid-column: 1 / -1; }
@@ -195,13 +269,16 @@ footer { padding-top: 78px; background: var(--black); }
     .hero-text h1 { font-size: clamp(2.1rem, 11vw, 3rem); line-height: 1.05; }
     .hero-buttons { flex-direction: column; align-items: stretch; }
     .hero-buttons .btn-primary, .hero-buttons .btn-secondary { width: 100%; }
+    .hero-clients { padding: 16px; }
+    .hero-clients-heading, .hero-clients-list { justify-content: center; }
+    .hero-clients-label { font-size: .92rem; }
     .hero-image img { aspect-ratio: 4 / 3; border-radius: 18px; }
     .trust-grid, .counter-grid, .especialidades-grid, .servicos-grid, .clientes-grid, .diferenciais-grid, .depoimentos-grid, .gallery-grid, .footer-grid { grid-template-columns: 1fr; }
     .trust-item { justify-content: flex-start; padding: 9px 14px; }
     .counter-section, .sobre, .especialidades, .servicos, .galeria, .diferenciais, .clientes, .depoimentos, .coleta-entrega, .contato-unificado, .mapa { padding-top: 78px; padding-bottom: 78px; }
     .counter-box, .especialidade-card, .diferencial-card { padding: 30px 22px; }
     .servico-card, .cliente-card, .depoimento-card { padding: 28px 22px; }
-    .owner-card { width: min(100%, 420px); padding: 10px; }
+    .owner-card { width: min(100%, 360px); height: min(360px, 92vw); padding: 9px; }
     .sobre-text h3 { font-size: 1.35rem; }
     .gallery-grid { gap: 14px; }
     .gallery-grid img { border-radius: 14px; }
