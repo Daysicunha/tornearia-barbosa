@@ -1,0 +1,16 @@
+TORNEARIA BARBOSA — ARQUIVOS AJUSTADOS
+
+1. Este pacote contém os arquivos de código atualizados.
+2. Copie para ele a pasta assets/img do projeto original, mantendo estes nomes:
+   - logotorneariabarbosa.png
+   - torno.jpg
+   - hero.jpg (se existir; caso não exista, o fundo continuará escuro normalmente)
+   - andreeadelmo.png
+   - galeria (1).jpeg até galeria (6).jpeg
+3. Antes da publicação, confira se o endereço final do Vercel será:
+   https://tornearia-barbosa.vercel.app/
+4. Caso o Vercel use outro endereço, substitua a URL acima em:
+   - index.html
+   - robots.txt
+   - sitemap.xml
+5. O e-mail adicionado é: barbosatornearia@gmail.com
