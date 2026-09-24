@@ -47,19 +47,19 @@ header::after { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px
 .menu a:hover { color: var(--green-light); }
 .menu-toggle { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 10px; color: var(--white); background: transparent; cursor: pointer; font-size: 1.7rem; }
 
-.hero { position: relative; display: flex; min-height: 100svh; align-items: center; padding: calc(var(--header-height) + 58px) 0 70px; background: linear-gradient(rgba(15, 15, 15, .93), rgba(15, 15, 15, .98)), url("../img/hero.jpg") center / cover no-repeat; }
-.hero-overlay { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 78% 42%, rgba(8, 187, 63, .12), transparent 38%); }
-.hero-wrapper { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(340px, .9fr); align-items: center; gap: clamp(40px, 6vw, 78px); }
+.hero { position: relative; display: flex; min-height: min(100svh, 820px); align-items: center; padding: calc(var(--header-height) + 32px) 0 48px; background: linear-gradient(115deg, rgba(15, 15, 15, .97), rgba(15, 15, 15, .89)), url("../img/hero.jpg") center / cover no-repeat; }
+.hero-overlay { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 82% 45%, rgba(8, 187, 63, .1), transparent 40%); }
+.hero-wrapper { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(320px, .9fr); align-items: center; gap: clamp(32px, 4.5vw, 64px); }
 .hero-text { min-width: 0; }
-.hero-tag { display: inline-flex; max-width: 100%; padding: 9px 20px; border: 1px solid rgba(8, 187, 63, .4); border-radius: 999px; color: #7cff9f; background: rgba(2, 86, 53, .25); font-size: .8rem; font-weight: 700; letter-spacing: 1.6px; line-height: 1.45; text-transform: uppercase; }
-.hero-text h1 { max-width: 760px; margin: 22px 0 24px; color: var(--white); font-family: "Montserrat", sans-serif; font-size: clamp(2.55rem, 5vw, 4.4rem); font-weight: 800; line-height: 1.02; text-wrap: balance; }
-.hero-text > p { max-width: 670px; margin-bottom: 32px; color: #d5d5d5; font-size: clamp(1rem, 1.5vw, 1.14rem); line-height: 1.65; }
+.hero-tag { display: inline-flex; max-width: 100%; padding: 8px 16px; border: 1px solid rgba(8, 187, 63, .4); border-radius: 999px; color: #7cff9f; background: rgba(2, 86, 53, .25); font-size: .75rem; font-weight: 700; letter-spacing: 1.3px; line-height: 1.4; text-transform: uppercase; }
+.hero-text h1 { max-width: 650px; margin: 18px 0 18px; color: var(--white); font-family: "Montserrat", sans-serif; font-size: clamp(2.35rem, 3.45vw, 3.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -.035em; text-wrap: balance; }
+.hero-text > p { max-width: 590px; margin-bottom: 24px; color: #d5d5d5; font-size: clamp(.98rem, 1.2vw, 1.08rem); line-height: 1.6; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero-clients {
-    width: min(100%, 670px);
-    margin: 36px auto 0;
-    text-align: center;
-    padding: 18px 20px;
+    width: min(100%, 590px);
+    margin: 24px 0 0;
+    text-align: left;
+    padding: 14px 18px;
     border: 1px solid rgba(8, 187, 63, .48);
     border-radius: 16px;
     background: linear-gradient(135deg, rgba(2, 86, 53, .28), rgba(8, 187, 63, .08));
@@ -69,16 +69,16 @@ header::after { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px
 .hero-clients-heading {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 14px;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .hero-clients-icon {
     display: grid;
-    width: 40px;
-    height: 40px;
-    flex: 0 0 40px;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
     place-items: center;
     border-radius: 50%;
     color: var(--white);
@@ -97,15 +97,15 @@ header::after { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px
 .hero-clients-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 8px;
 }
 
 .hero-clients-list span {
     display: inline-flex;
-    min-height: 38px;
+    min-height: 32px;
     align-items: center;
-    padding: 9px 14px;
+    padding: 7px 11px;
     border: 1px solid rgba(124, 255, 159, .25);
     border-radius: 999px;
     color: #effff3;
@@ -114,9 +114,8 @@ header::after { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px
     font-weight: 600;
     line-height: 1.2;
 }
-.hero-image { display: flex; min-width: 0; justify-content: flex-end; }
-.hero-image img { width: 100%; max-width: 500px; aspect-ratio: 4 / 5; border: 1px solid rgba(255, 255, 255, .08); border-radius: 22px; object-fit: cover; box-shadow: 0 20px 50px rgba(0, 0, 0, .4); animation: float 5s ease-in-out infinite; }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.hero-image { display: flex; width: 100%; max-width: 470px; min-width: 0; aspect-ratio: 5 / 5.3; justify-self: end; padding: 9px; border: 1px solid rgba(124, 255, 159, .22); border-radius: 23px; background: linear-gradient(145deg, rgba(8, 187, 63, .12), rgba(255, 255, 255, .025)); box-shadow: 0 25px 65px rgba(0, 0, 0, .28); }
+.hero-image img { width: 100%; height: 100%; min-height: 0; border-radius: 15px; object-fit: cover; object-position: center 47%; }
 
 .trust-bar { padding: 24px 0; background: linear-gradient(90deg, var(--green-dark), var(--green)); }
 .trust-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
@@ -239,14 +238,14 @@ footer { padding-top: 78px; background: var(--black); }
     .menu.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
     .menu li { width: 100%; }
     .menu a { width: 100%; padding: 14px 12px; border-bottom: 1px solid rgba(255, 255, 255, .06); text-align: center; }
-    .hero { min-height: auto; padding: calc(var(--header-height) + 52px) 0 78px; }
-    .hero-wrapper { grid-template-columns: 1fr; gap: 42px; }
+    .hero { min-height: auto; padding: calc(var(--header-height) + 42px) 0 64px; }
+    .hero-wrapper { grid-template-columns: 1fr; gap: 32px; }
     .hero-text, .hero-text h1, .hero-text > p, .hero-clients { margin-inline: auto; text-align: center; }
     .hero-tag { display: flex; width: fit-content; margin-inline: auto; justify-content: center; text-align: center; }
     .hero-buttons { justify-content: center; }
     .hero-clients-heading, .hero-clients-list { justify-content: center; }
-    .hero-image { justify-content: center; }
-    .hero-image img { max-width: 620px; aspect-ratio: 16 / 10; }
+    .hero-image { width: min(100%, 620px); max-width: 620px; aspect-ratio: 16 / 10; justify-self: center; }
+    .hero-image img { aspect-ratio: auto; }
     .trust-grid, .counter-grid, .diferenciais-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .especialidades-grid, .servicos-grid, .clientes-grid, .depoimentos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .sobre-content { grid-template-columns: 1fr; gap: 38px; }
@@ -263,16 +262,17 @@ footer { padding-top: 78px; background: var(--black); }
     .section-title { margin-bottom: 38px; }
     .section-title span { font-size: .76rem; letter-spacing: 2px; }
     .section-title h2, .sobre .section-title h2 { font-size: clamp(1.7rem, 8vw, 2.15rem); }
-    .hero { padding-bottom: 62px; }
-    .hero-wrapper { gap: 34px; }
+    .hero { padding: calc(var(--header-height) + 30px) 0 52px; }
+    .hero-wrapper { gap: 30px; }
     .hero-tag { padding: 8px 14px; font-size: .7rem; letter-spacing: 1px; }
-    .hero-text h1 { font-size: clamp(2.1rem, 11vw, 3rem); line-height: 1.05; }
+    .hero-text h1 { font-size: clamp(2rem, 9vw, 2.8rem); line-height: 1.1; }
     .hero-buttons { flex-direction: column; align-items: stretch; }
     .hero-buttons .btn-primary, .hero-buttons .btn-secondary { width: 100%; }
     .hero-clients { padding: 16px; }
     .hero-clients-heading, .hero-clients-list { justify-content: center; }
     .hero-clients-label { font-size: .92rem; }
-    .hero-image img { aspect-ratio: 4 / 3; border-radius: 18px; }
+    .hero-image { aspect-ratio: 4 / 3; }
+    .hero-image img { border-radius: 14px; }
     .trust-grid, .counter-grid, .especialidades-grid, .servicos-grid, .clientes-grid, .diferenciais-grid, .depoimentos-grid, .gallery-grid, .footer-grid { grid-template-columns: 1fr; }
     .trust-item { justify-content: flex-start; padding: 9px 14px; }
     .counter-section, .sobre, .especialidades, .servicos, .galeria, .diferenciais, .clientes, .depoimentos, .coleta-entrega, .contato-unificado, .mapa { padding-top: 78px; padding-bottom: 78px; }
