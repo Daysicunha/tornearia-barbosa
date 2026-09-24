@@ -114,7 +114,7 @@ header::after { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px
     font-weight: 600;
     line-height: 1.2;
 }
-.hero-image { display: flex; width: 100%; max-width: 350px; min-width: 0; aspect-ratio: 9 / 16; justify-self: end; padding: 9px; border: 1px solid rgba(124, 255, 159, .22); border-radius: 23px; background: linear-gradient(145deg, rgba(8, 187, 63, .12), rgba(255, 255, 255, .025)); box-shadow: 0 25px 65px rgba(0, 0, 0, .28); }
+.hero-image { display: flex; width: 100%; max-width: 350px; min-width: 0; aspect-ratio: 9 / 12; justify-self: end; padding: 9px; border: 1px solid rgba(124, 255, 159, .22); border-radius: 23px; background: linear-gradient(145deg, rgba(8, 187, 63, .12), rgba(255, 255, 255, .025)); box-shadow: 0 25px 65px rgba(0, 0, 0, .28); }
 .hero-image img { width: 100%; height: 100%; min-height: 0; border-radius: 15px; object-fit: contain; object-position: center; background: #101514; }
 
 .trust-bar { padding: 24px 0; background: linear-gradient(90deg, var(--green-dark), var(--green)); }
@@ -297,7 +297,7 @@ footer { padding-top: 78px; background: var(--black); }
     .hero-tag { display: flex; width: fit-content; margin-inline: auto; justify-content: center; text-align: center; }
     .hero-buttons { justify-content: center; }
     .hero-clients-heading, .hero-clients-list { justify-content: center; }
-    .hero-image { width: min(100%, 330px); max-width: 330px; aspect-ratio: 9 / 16; justify-self: center; }
+    .hero-image { width: min(100%, 330px); max-width: 330px; aspect-ratio: 9 / 12; justify-self: center; }
     .hero-image img { aspect-ratio: auto; }
     .trust-grid, .counter-grid, .diferenciais-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .especialidades-grid, .servicos-grid, .clientes-grid, .depoimentos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -324,7 +324,7 @@ footer { padding-top: 78px; background: var(--black); }
     .hero-clients { padding: 16px; }
     .hero-clients-heading, .hero-clients-list { justify-content: center; }
     .hero-clients-label { font-size: .92rem; }
-    .hero-image { width: min(100%, 280px); max-width: 280px; aspect-ratio: 9 / 16; }
+    .hero-image { width: min(100%, 280px); max-width: 280px; aspect-ratio: 9 / 12; }
     .hero-image img { border-radius: 14px; }
     .trust-grid, .counter-grid, .especialidades-grid, .servicos-grid, .clientes-grid, .diferenciais-grid, .depoimentos-grid, .gallery-grid, .footer-grid { grid-template-columns: 1fr; }
     .trust-item { justify-content: flex-start; padding: 9px 14px; }
